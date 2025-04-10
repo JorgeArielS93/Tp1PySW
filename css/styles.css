@@ -878,3 +878,258 @@ th, td {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
   }
+
+  /* Modo noche inicio*/
+  /* === Estilo del botón modo noche === */
+.modo-noche-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    font-size: 0.9rem;
+    background: #fff;
+    padding: 0.3em 0.8em;
+    border-radius: 1em;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  
+  .modo-noche-toggle input[type="checkbox"] {
+    display: none;
+  }
+  
+  .modo-noche-toggle label {
+    cursor: pointer;
+  }
+  
+  /* === Estilo modo noche global === */
+  body.noche {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.noche header,
+  body.noche footer {
+    background-color: #1f1f1f;
+  }
+  
+  body.noche .mega-menu {
+    background-color: #1f1f1f;
+  }
+  
+  body.noche .mega-menu li a {
+    color: #e0e0e0;
+  }
+  
+  body.noche .mega-menu li a:hover {
+    background-color: #333;
+  }
+  
+  body.noche .card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  body.noche .overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  body.noche .counter {
+    color: #ff6347;
+  }
+  
+  body.noche .testimonial {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  body.noche .social-links a {
+    color: #ff6347;
+  }
+
+
+  /* Estilo botón modo noche BLOG REVISTA*/
+  body.noche {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+  }
+  
+  body.noche .blog-fitness-post {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+  
+  body.noche .blog-fitness-texto {
+    background: #333;
+  }
+  
+  body.noche .blog-fitness-tags label {
+    background: #444;
+    color: #ddd;
+  }
+  
+  body.noche .blog-fitness-tags label:hover,
+  body.noche .blog-fitness-tags label:focus {
+    background: #666;
+  }
+
+  
+  /** Estilo modo noche CLASES */
+  /* Modo noche para la página de clases */
+body.noche .filtro-labels label {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.noche .filtro-labels label:hover {
+    background-color: #444;
+  }
+  
+  body.noche .galeria .clase {
+    filter: brightness(0.8);
+    border: 2px solid #444;
+  }
+  
+  body.noche .horarios table {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    border-collapse: collapse;
+  }
+  
+  body.noche .horarios th,
+  body.noche .horarios td {
+    border: 1px solid #444;
+    padding: 0.5em;
+  }
+  
+  body.noche .horarios th {
+    background-color: #2c2c2c;
+  }
+  
+  body.noche footer form input,
+  body.noche footer form button {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+  }
+/* Estilo Modo NOCHE ENTRENADORES*/
+/* === Modo noche para página de ENTRENADORES === */
+body.noche .entrenadores {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+  }
+  
+  body.noche .flip-front {
+    background: #2a2a2a;
+    color: #fff;
+  }
+  
+  body.noche .flip-back {
+    background: #333;
+  }
+  
+  body.noche .barra {
+    background: #555;
+  }
+  
+  body.noche .barra::after {
+    background: #00e676; /* verde más llamativo para modo noche */
+  }
+  
+  body.noche .estrella {
+    background: gold;
+    opacity: 0.8;
+  }
+  
+  body.noche footer {
+    background: #111;
+    color: #ccc;
+  }
+  
+  body.noche footer input,
+  body.noche footer button {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  body.noche .modo-noche-toggle label {
+    background: transparent;
+    color: #f5f5f5;
+  }
+  
+/* === Modo noche para la página de contacto === */
+body.noche .form-contacto-section {
+    background: #1f1f1f;
+    color: #f5f5f5;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+  }
+  body.noche .form-contacto-input {
+    background: #2a2a2a;
+    color: #f5f5f5;
+    border: 1px solid #555;
+  }
+  body.noche .form-contacto-input::placeholder {
+    color: #aaa;
+  }
+  body.noche .form-contacto-btn {
+    background-color: #198754; /* tono verde oscuro */
+    color: white;
+  }
+  body.noche .form-contacto-btn:disabled {
+    background-color: #555;
+  }
+  body.noche .form-contacto-modal-content {
+    background: #2a2a2a;
+    color: #f5f5f5;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+  }
+  body.noche .form-contacto-modal-close {
+    background: #0d6efd;
+    color: white;
+  }
+  body.noche footer {
+    background-color: #111;
+    color: #ddd;
+  }
+  body.noche footer input,
+  body.noche footer button {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  body.noche .modo-noche-toggle label {
+    color: #f5f5f5;
+  }
+
+  /** MODO NOCHE PRECIOS*/
+  body.noche .precios-section {
+    background-color: #1a1a1a;
+  }
+  
+  body.noche .precios-plan {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+  }
+  
+  body.noche .precios-precio {
+    color: #ff6347;
+  }
+  
+  body.noche .precios-tooltip-text {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  body.noche .precios-toggle-label {
+    background: #333;
+    color: #fff;
+  }
+  
+  body.noche .precios-btn {
+    background: #e5533d;
+  }
+  
+  body.noche .precios-btn:hover {
+    background: #ff6347;
+  }
+  

@@ -68,4 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll(); // Llamada inicial
+
+  // === Modo noche toggle con ícono 🌙 / 🌞 ===
+  const toggleNoche = document.getElementById('toggle-noche');
+  const iconoNoche = document.getElementById('icono-noche');
+
+  function actualizarIconoNoche(activado) {
+    iconoNoche.textContent = activado ? '🌞' : '🌙';
+  }
+
+  const nocheGuardado = localStorage.getItem('modoNoche') === 'true';
+
+  if (nocheGuardado) {
+    toggleNoche.checked = true;
+    document.body.classList.add('noche');
+  }
+
+  actualizarIconoNoche(nocheGuardado);
+
+  toggleNoche?.addEventListener('change', () => {
+    const activado = toggleNoche.checked;
+    document.body.classList.toggle('noche', activado);
+    localStorage.setItem('modoNoche', activado);
+    actualizarIconoNoche(activado);
+  });
 });
