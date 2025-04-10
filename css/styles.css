@@ -1,0 +1,880 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+}
+
+.mega-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.mega-menu li {
+    float: right;
+}
+
+.mega-menu .logo {
+    float: left;
+}
+
+.mega-menu .logo img {
+    width: 40px;
+    height: auto;
+}
+
+.mega-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mega-menu li a:hover {
+    background-color: #111;
+}
+
+.hero {
+    position: relative;
+    height: 50vh;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.clases-destacadas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    padding: 2em;
+}
+
+.card {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.contador {
+    text-align: center;
+    padding: 2em;
+}
+
+.counter {
+    font-size: 2em;
+    animation: count 2s infinite;
+}
+
+@keyframes count {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.testimonios {
+    padding: 2em;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.map {
+    margin-top: 2em;
+}
+
+/* =================== */
+/* === FILTROS CSS === */
+/* =================== */
+
+.filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.filtros input {
+    display: none;
+}
+
+.filtro-labels {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filtro-labels label {
+    padding: 0.5rem 1rem;
+    background: #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filtro-labels label:hover {
+    background: #bbb;
+}
+
+#todos:checked ~ .filtro-labels label[for="todos"],
+#musculacion:checked ~ .filtro-labels label[for="musculacion"],
+#crossfit:checked ~ .filtro-labels label[for="crossfit"],
+#yoga:checked ~ .filtro-labels label[for="yoga"],
+#spinning:checked ~ .filtro-labels label[for="spinning"] {
+    background-color: #222;
+    color: #fff;
+}
+
+#musculacion:checked ~ .galeria .clase:not(.musculacion),
+#crossfit:checked ~ .galeria .clase:not(.crossfit),
+#yoga:checked ~ .galeria .clase:not(.yoga),
+#spinning:checked ~ .galeria .clase:not(.spinning) {
+    display: none;
+}
+
+#todos:checked ~ .galeria .clase {
+    display: block;
+}
+
+/* ==================== */
+/* === GALERÍA CLASE === */
+/* ==================== */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    padding: 1em;
+}
+
+.clase {
+    position: relative;
+    overflow: hidden;
+}
+
+.clase img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.clase:hover img {
+    transform: scale(1.1);
+}
+
+.clase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.clase:hover::after {
+    opacity: 1;
+}
+
+/* ======================= */
+/* === HORARIOS TABLE ==== */
+/* ======================= */
+
+.horarios {
+    padding: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* ============================ */
+/* === RESPONSIVE HORARIOS === */
+/* ============================ */
+
+@media (max-width: 768px) {
+    .mega-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clases-destacadas,
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .horarios table,
+    .horarios thead,
+    .horarios tbody,
+    .horarios th,
+    .horarios td,
+    .horarios tr {
+        display: block;
+        width: 100%;
+    }
+
+    .horarios thead {
+        display: none;
+    }
+
+    .horarios tr {
+        margin-bottom: 1em;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 0.5em;
+        background-color: white;
+    }
+
+    .horarios td {
+        text-align: left;
+        padding: 0.5em 1em;
+        position: relative;
+    }
+
+    .horarios td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.3em;
+        color: #333;
+    }
+}
+
+/**Estilo Entrenadores */
+.entrenadores {
+    padding: 2em;
+    text-align: center;
+    background: #fff;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.flip-card {
+    background: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.flip-front {
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.flip-front h3 {
+    margin: 1em 0;
+}
+
+.flip-back {
+    background: #222;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.habilidad {
+    margin: 1em 0;
+    text-align: left;
+}
+
+.barra {
+    background: #444;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.barra::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: limegreen;
+    animation: crecer 2s ease forwards;
+    border-radius: 5px;
+    width: var(--w, 0%);
+}
+
+.barra.fuerza::after { width: 90%; }
+.barra.flexibilidad::after { width: 80%; }
+
+@keyframes crecer {
+    from { width: 0; }
+    to { width: inherit; }
+}
+
+/* Estrellas CSS-only */
+.rating {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.estrella {
+    width: 24px;
+    height: 24px;
+    background: gold;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 50% 70%, 
+        21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.estrella:hover,
+.estrella:hover ~ .estrella {
+    opacity: 1;
+}
+
+.estrella.half {
+    background: linear-gradient(to right, gold 50%, #ccc 50%);
+}
+/* Estilo responsivo tarjetas */
+@media (max-width: 1024px) {
+    .flip-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-card {
+        width: 90%;
+        height: 400px;
+    }
+
+    .mega-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mega-menu li {
+        float: none;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flip-card {
+        height: 380px;
+    }
+
+    .flip-front h3 {
+        font-size: 1.1em;
+    }
+
+    .flip-back h4 {
+        font-size: 1em;
+    }
+
+    .barra {
+        height: 8px;
+    }
+
+    .estrella {
+        width: 20px;
+        height: 20px;
+    }
+}
+/* Formulario Contacto*/
+
+.form-contacto-section {
+    padding: 2em;
+    background: #fff;
+    max-width: 700px;
+    margin: 2em auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  .form-contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .form-contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  
+  .form-contacto-grid textarea {
+    grid-column: span 2;
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-contacto-input {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .form-contacto-input:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  .form-contacto-btn {
+    align-self: flex-end;
+    padding: 0.8em 1.5em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .form-contacto-btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .form-contacto-spinner {
+    display: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+  }
+  
+  .form-contacto-btn.loading .form-contacto-spinner {
+    display: inline-block;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Modal */
+  .form-contacto-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-contacto-modal-content {
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .form-contacto-modal-close {
+    margin-top: 1em;
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .form-contacto-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .form-contacto-grid textarea {
+      grid-column: span 1;
+    }
+  }
+  /* EStilos Tabla Precios*/
+
+  .precios-section {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .precios-titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .precios-toggle {
+    margin-bottom: 2rem;
+  }
+  
+  .precios-toggle-input {
+    display: none;
+  }
+  
+  .precios-toggle-label {
+    display: inline-flex;
+    gap: 1rem;
+    background: #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .precios-tabla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .precios-plan {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .precios-plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .precios-destacado {
+    border: 2px solid #ff6347;
+  }
+  
+  .precios-nombre {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .precios-precio {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .precios-lista {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .precios-lista li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    cursor: help;
+  }
+  
+  .precios-tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #222;
+    color: #fff;
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    z-index: 10;
+    width: 180px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+  }
+  
+  .precios-tooltip:hover .precios-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .precios-btn {
+    background: #ff6347;
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .precios-btn:hover {
+    background: #e5533d;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .precios-tabla {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Blog Revista  */
+  .blog-fitness-section {
+    padding: 2rem;
+    background: #fafafa;
+    font-family: 'Georgia', serif;
+  }
+  
+  .blog-fitness-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .blog-fitness-titulo {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .blog-fitness-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .blog-fitness-tags label {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: #ddd;
+    border-radius: 2rem;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .blog-fitness-section input[type="radio"] {
+    display: none;
+  }
+  
+  .blog-fitness-section input[type="radio"]:checked + label {
+    background: #ff6347;
+    color: white;
+  }
+
+
+
+  #blog-fitness-todos:checked ~ .blog-fitness-header .blog-fitness-tags label[for="blog-fitness-todos"],
+  #blog-fitness-nutricion:checked ~ .blog-fitness-header .blog-fitness-tags label[for="blog-fitness-nutricion"],
+  #blog-fitness-entrenamiento:checked ~ .blog-fitness-header .blog-fitness-tags label[for="blog-fitness-entrenamiento"] {
+    background: #ff6347;
+    color: white;
+  }
+  
+
+
+  
+  /* Grid estilo revista */
+  .blog-fitness-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Ocultar todos los posts por defecto */
+  .blog-fitness-post {
+    display: none;
+    background: white;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Mostrar los posts según el filtro seleccionado */
+  #blog-fitness-todos:checked ~ .blog-fitness-grid .blog-fitness-post,
+  #blog-fitness-nutricion:checked ~ .blog-fitness-grid .blog-fitness-nutricion,
+  #blog-fitness-entrenamiento:checked ~ .blog-fitness-grid .blog-fitness-entrenamiento {
+    display: block;
+  }
+  
+  /* Scroll reveal */
+  .blog-fitness-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Comentarios */
+  .blog-fitness-comentarios {
+    margin-top: 3rem;
+    background: #fff;
+    padding: 1rem;
+    border-top: 2px solid #eee;
+  }
+  
+  .blog-fitness-comentario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-fitness-avatar {
+    width: 40px;
+    height: 40px;
+    background: #ff6347;
+    border-radius: 50%;
+    margin-right: 1rem;
+    position: relative;
+  }
+  
+  .blog-fitness-avatar::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 13px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+  }
+  
+  .blog-fitness-texto {
+    background: #f5f5f5;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }

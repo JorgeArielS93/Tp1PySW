@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog de Fitness</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="mega-menu">
+        <li><a href="/pages/formulario.html">Contacto</a></li>
+        <li><a href="/pages/clases.html">Clases</a></li>
+        <li><a href="/pages/precios.html">Precios</a></li>
+        <li><a href="/pages/entrenadores.html">Entrenadores</a></li>
+        <li><a href="/index.html">Inicio</a></li>
+        <li class="logo"><img src="/img/logo.png" alt="logo" /></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="/video/entrenamiento.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay">
+      <h1>¡Sport Energy Gym!</h1>
+    </div>
+  </section>
+
+  <section class="blog-fitness-section">
+    <!-- Inputs radio MOVIDOS FUERA del header -->
+    <input type="radio" id="blog-fitness-todos" name="blog-fitness-filter" checked>
+    <input type="radio" id="blog-fitness-nutricion" name="blog-fitness-filter">
+    <input type="radio" id="blog-fitness-entrenamiento" name="blog-fitness-filter">
+
+    <header class="blog-fitness-header">
+      <h1 class="blog-fitness-titulo">Revista Fitness</h1>
+      <div class="blog-fitness-tags">
+        <label for="blog-fitness-todos">Todos</label>
+        <label for="blog-fitness-nutricion">Nutrición</label>
+        <label for="blog-fitness-entrenamiento">Entrenamiento</label>
+      </div>
+    </header>
+
+    <div class="blog-fitness-grid">
+        <article class="blog-fitness-post blog-fitness-nutricion">
+          <h2>Alimentación post entrenamiento</h2>
+          <p>Descubre los mejores alimentos para una recuperación efectiva.</p>
+          <p>Después de entrenar, tu cuerpo necesita proteínas para reparar los músculos y carbohidratos para reponer la energía.</p>
+          <p>Opta por alimentos como huevos, batidos de proteínas, arroz integral, frutas y vegetales. Evita las grasas saturadas justo después de entrenar.</p>
+          <p>Una buena alimentación post entrenamiento acelera la recuperación y mejora tu rendimiento general.</p>
+        </article>
+      
+        <article class="blog-fitness-post blog-fitness-entrenamiento">
+          <h2>Rutina full-body de 30 minutos</h2>
+          <p>Ideal para días ocupados sin perder progreso.</p>
+          <p>Esta rutina está diseñada para trabajar todos los grupos musculares en poco tiempo. Incluye ejercicios como sentadillas, flexiones, planchas y burpees.</p>
+          <p>Haz 3 rondas de 10-12 repeticiones por ejercicio, descansando solo 30 segundos entre rondas.</p>
+          <p>Perfecta para realizar en casa o en el gimnasio cuando el tiempo es limitado.</p>
+        </article>
+      
+        <article class="blog-fitness-post blog-fitness-nutricion">
+          <h2>Los 5 suplementos esenciales</h2>
+          <p>¿Valen la pena? Te explicamos cada uno.</p>
+          <p>1. Proteína en polvo: práctica para alcanzar tu cuota diaria de proteínas.<br>
+             2. Creatina: mejora la fuerza y el rendimiento en entrenamientos intensos.<br>
+             3. Omega-3: beneficios para la salud cardiovascular y la inflamación.<br>
+             4. Multivitamínico: apoya funciones básicas del organismo.<br>
+             5. BCAA: útil en entrenamientos prolongados o en ayuno.</p>
+          <p>Consulta siempre a un profesional antes de iniciar cualquier suplemento.</p>
+        </article>
+      </div>
+
+    <section class="blog-fitness-comentarios">
+      <h3>Comentarios</h3>
+      <div class="blog-fitness-comentario">
+        <div class="blog-fitness-avatar"></div>
+        <div class="blog-fitness-texto">
+          <p><strong>Ana:</strong> Muy útil el artículo, gracias!</p>
+        </div>
+      </div>
+      <div class="blog-fitness-comentario">
+        <div class="blog-fitness-avatar"></div>
+        <div class="blog-fitness-texto">
+          <p><strong>Luis:</strong> Empecé esta rutina y me encantó 💪</p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <form>
+      <label for="email">Suscríbete a nuestro newsletter:</label>
+      <input type="email" id="email" name="email" required />
+      <button type="submit">Suscribirse</button>
+    </form>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=..."
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </footer>
+
+  <script src="../js/scripts.js"></script>
+</body>
+</html>

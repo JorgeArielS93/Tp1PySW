@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="mega-menu">
+                <li><a href="/pages/formulario.html">Contacto</a></li>
+                <li><a href="/pages/entrenadores.html">Entrenadores</a></li>
+                <li><a href="/pages/blog.html">Blog</a></li>
+                <li><a href="/pages/precios.html">Precios</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li class="logo"><img src="/img/logo.png" alt="logo"></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="/video/entrenamiento.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1>¡Sport Energy Gym!</h1>
+        </div>
+    </section>
+    <section class="filtros">
+        <input type="radio" id="todos" name="categoria" checked>
+        <input type="radio" id="musculacion" name="categoria">
+        <input type="radio" id="crossfit" name="categoria">
+        <input type="radio" id="yoga" name="categoria">
+        <input type="radio" id="spinning" name="categoria">
+      
+        <div class="filtro-labels">
+          <label for="todos">Todos</label>
+          <label for="musculacion">Musculación</label>
+          <label for="crossfit">CrossFit</label>
+          <label for="yoga">Yoga</label>
+          <label for="spinning">Spinning</label>
+        </div>
+      
+        <section class="galeria">
+          <div class="clase musculacion"><img src="/img/musculacion.jpg"></div>
+          <div class="clase crossfit"><img src="/img/crossfit.jpg"></div>
+          <div class="clase yoga"><img src="/img/yoga.jpg"></div>
+          <div class="clase spinning"><img src="/img/spinning.jpg"></div>
+          <!-- más clases -->
+        </section>
+      </section>
+      
+      <section class="horarios">
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Musculación</th>
+                    <th>CrossFit</th>
+                    <th>Yoga</th>
+                    <th>Spinning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Día">Lunes</td>
+                    <td data-label="Musculación">8:00 - 9:00</td>
+                    <td data-label="CrossFit">10:00 - 11:00</td>
+                    <td data-label="Yoga">12:00 - 13:00</td>
+                    <td data-label="Spinning">14:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Martes</td>
+                    <td data-label="Musculación">—</td>
+                    <td data-label="CrossFit">17:00 - 18:00</td>
+                    <td data-label="Yoga">8:00 - 9:00</td>
+                    <td data-label="Spinning">—</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Miércoles</td>
+                    <td data-label="Musculación">17:00 - 18:00</td>
+                    <td data-label="CrossFit">—</td>
+                    <td data-label="Yoga">14:00 - 15:00</td>
+                    <td data-label="Spinning">8:00 - 9:00</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Jueves</td>
+                    <td data-label="Musculación">—</td>
+                    <td data-label="CrossFit">8:00 - 9:00</td>
+                    <td data-label="Yoga">—</td>
+                    <td data-label="Spinning">17:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Viernes</td>
+                    <td data-label="Musculación">14:00 - 15:00</td>
+                    <td data-label="CrossFit">—</td>
+                    <td data-label="Yoga">10:00 - 11:00</td>
+                    <td data-label="Spinning">—</td>
+                </tr>
+                <tr>
+                    <td data-label="Día">Sábado</td>
+                    <td data-label="Musculación">10:00 - 11:00</td>
+                    <td data-label="CrossFit">12:00 - 13:00</td>
+                    <td data-label="Yoga">—</td>
+                    <td data-label="Spinning">9:00 - 10:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <footer>
+        <form>
+            <label for="email">Suscríbete a nuestro newsletter:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509364!2d144.9537353153167!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1d4c4d4e0e!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1613986600000!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

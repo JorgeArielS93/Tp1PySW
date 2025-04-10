@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="mega-menu">
+                <li><a href="/pages/clases.html">Clases</a></li>
+                <li><a href="/pages/entrenadores.html">Entrenadores</a></li>
+                <li><a href="/pages/blog.html">Blog</a></li>
+                <li><a href="/pages/precios.html">Precios</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li class="logo"><img src="/img/logo.png" alt="logo"></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="/video/entrenamiento.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1>¡Sport Energy Gym!</h1>
+        </div>
+    </section>
+
+    <section class="form-contacto-section">
+        <h2>Contáctanos</h2>
+        <form id="formulario-contacto" class="form-contacto-form">
+          <div class="form-contacto-grid">
+            <input class="form-contacto-input" type="text" name="nombre" placeholder="Nombre" required />
+            <input class="form-contacto-input" type="email" name="email" placeholder="Email" required />
+            <input class="form-contacto-input" type="tel" name="telefono" placeholder="Teléfono" pattern="[0-9]{10}" required />
+            <select class="form-contacto-input" name="motivo" required>
+              <option value="">Motivo de contacto</option>
+              <option value="clases">Información de Clases</option>
+              <option value="entrenadores">Conocer entrenadores</option>
+              <option value="otro">Otro</option>
+            </select>
+            <textarea class="form-contacto-input" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+          </div>
+          <button type="submit" class="form-contacto-btn">
+            Enviar
+            <span class="form-contacto-spinner"></span>
+          </button>
+        </form>
+      
+        <div id="form-contacto-modal" class="form-contacto-modal">
+          <div class="form-contacto-modal-content">
+            <p>¡Gracias por contactarnos! Te responderemos pronto.</p>
+            <button id="cerrar-modal" class="form-contacto-modal-close">Cerrar</button>
+          </div>
+        </div>
+      </section>
+      
+
+    <footer>
+        <form>
+            <label for="email">Suscríbete a nuestro newsletter:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509364!2d144.9537353153167!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1d4c4d4e0e!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1613986600000!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+
+</body>
+</html>

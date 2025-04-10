@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="mega-menu">
+                <li><a href="/pages/formulario.html">Contacto</a></li>
+                <li><a href="/pages/clases.html">Clases</a></li>
+                <li><a href="/pages/blog.html">Blog</a></li>
+                <li><a href="/pages/entrenadores.html">Entrenadores</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li class="logo"><img src="/img/logo.png" alt="logo"></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="/video/entrenamiento.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1>¡Sport Energy Gym!</h1>
+        </div>
+    </section>
+
+
+    <section class="precios-section">
+        <h2 class="precios-titulo">Nuestros Planes</h2>
+      
+        <div class="precios-toggle">
+          <input type="checkbox" id="toggle-precios" class="precios-toggle-input" />
+          <label for="toggle-precios" class="precios-toggle-label">
+            <span>Mensual</span>
+            <span>Anual</span>
+          </label>
+        </div>
+      
+        <div class="precios-tabla">
+          <div class="precios-plan">
+            <h3 class="precios-nombre">Básico</h3>
+            <p class="precios-precio" data-mensual="$20" data-anual="$200"></p>
+            <ul class="precios-lista">
+              <li class="precios-tooltip">Acceso al gimnasio
+                <span class="precios-tooltip-text">Incluye acceso ilimitado</span>
+              </li>
+              <li class="precios-tooltip">Clases grupales
+                <span class="precios-tooltip-text">Hasta 3 por semana</span>
+              </li>
+              <li class="precios-tooltip">Sin entrenador personal
+                <span class="precios-tooltip-text">No incluye sesiones personalizadas</span>
+              </li>
+            </ul>
+            <button class="precios-btn">Elegir</button>
+          </div>
+      
+          <div class="precios-plan precios-destacado">
+            <h3 class="precios-nombre">Premium</h3>
+            <p class="precios-precio" data-mensual="$40" data-anual="$400"></p>
+            <ul class="precios-lista">
+              <li class="precios-tooltip">Acceso completo
+                <span class="precios-tooltip-text">Incluye áreas exclusivas</span>
+              </li>
+              <li class="precios-tooltip">Clases ilimitadas
+                <span class="precios-tooltip-text">Yoga, spinning, crossfit y más</span>
+              </li>
+              <li class="precios-tooltip">Entrenador personal
+                <span class="precios-tooltip-text">1 sesión semanal</span>
+              </li>
+            </ul>
+            <button class="precios-btn">Elegir</button>
+          </div>
+      
+          <div class="precios-plan">
+            <h3 class="precios-nombre">Intermedio</h3>
+            <p class="precios-precio" data-mensual="$30" data-anual="$300"></p>
+            <ul class="precios-lista">
+              <li class="precios-tooltip">Acceso total
+                <span class="precios-tooltip-text">Todas las instalaciones</span>
+              </li>
+              <li class="precios-tooltip">Clases diarias
+                <span class="precios-tooltip-text">1 clase diaria sin costo</span>
+              </li>
+              <li class="precios-tooltip">Entrenador personalizado
+                <span class="precios-tooltip-text">2 sesiones al mes</span>
+              </li>
+            </ul>
+            <button class="precios-btn">Elegir</button>
+          </div>
+        </div>
+      </section>
+      
+
+    <footer>
+        <form>
+            <label for="email">Suscríbete a nuestro newsletter:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509364!2d144.9537353153167!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1d4c4d4e0e!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1613986600000!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
